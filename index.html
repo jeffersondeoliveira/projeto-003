@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <style> /* Estilo do Site */
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 18px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background-color: hsl(217, 54%, 11%);
+    }
+
+    div#container {
+      width: 100vw;
+      height: 100vh;
+      color: azure;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ------------------------ */
+    main#Bloco {
+      border: 1px solid hsl(216, 50%, 16%);
+      border-radius: 15px;
+      height: 80%;
+      width: 350px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background-color: hsl(216, 50%, 16%);
+      box-shadow: 5px 5px 5px hsla(217, 74%, 6%, 0.849);
+    }
+
+    div.img {
+      position: relative;
+    }
+
+     div.img > img {
+      width: 320px;
+      height: 300px;
+      margin-top: 20px;
+      border-radius: 15px;
+      display: block;
+    } 
+
+    div.color-dima > img.view { 
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 40%;
+      left: 43%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+   
+    div.color-dima {
+      display: inline-block;
+
+      position: absolute;
+      margin-top: 20px;
+      border-radius: 15px;
+      top: 0;
+      left: 0;
+      width: 320px;
+      height: 300px;
+      background-color: rgba(255, 0, 0, 0);
+    }
+
+    div.color-dima:hover img.view   {
+      opacity: 1;
+    }
+
+    div.color-dima:hover {
+      background-color: hsla(178, 100%, 50%, 0.527);
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    /* ------------------------ */
+    div#paragrafos {
+      width: 320px;
+      text-align: left;
+    }
+
+    div#paragrafos > p.sub-titulo {
+      font-weight: bolder;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+      p.sub-titulo:hover {
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+
+    div#paragrafos > p.paragraf {
+      color: hsla(217, 29%, 72%, 0.596);
+      font-size: 16px;
+    }
+
+    /* ------------------------ */
+    div#paragrafos-baixos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      width: 330px;
+      height: 100px;
+      padding: 10px;
+    }
+
+
+    div#paragrafos-baixos > p.p1 {
+      color: hsl(178, 100%, 50%);
+      font-size: 11pt;
+      margin-right: 130px;
+    }
+
+    .img-diam {
+      margin: 6px;
+    }
+
+    div#paragrafos-baixos > p.p2 {
+      color: hsl(215, 20%, 53%);
+      font-size: 12pt;
+    }
+
+    /* ------------------------ */
+    div#perfil {
+      display: flex;
+      align-items: center;
+      
+      width: 95%;
+      height: 80px;
+      border-top: 1px solid hsl(215, 32%, 27%);
+    }
+
+    img.img-perfil {
+      height: 35px;
+      border-radius: 50%;
+      border: 1px solid white;
+      margin: 20px;
+    }
+
+    div#perfil > p {
+      font-size: 15px;
+      color: hsl(217, 29%, 72%);
+    }
+
+    div#perfil > p > span {
+      color: white;
+    }
+
+     span#marc:hover {
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+
+  </style>
+
+</head>
+<body> <!-- Dados do Site -->
+    <div id="container"> 
+          <main id="Bloco"> 
+            <div class="img"> 
+              <div class="color-dima"><img src="images/icon-view.svg" alt="view" class="view"></div>
+              <img src="images/image-equilibrium.jpg" alt="imagem">
+            </div>
+
+            <div id="paragrafos">
+              <p class="sub-titulo">Equilibrium #3429</p>
+              <p class="paragraf">Our Equilibrium collection promotes balance and calm.</p>
+            </div>
+
+            <div id="paragrafos-baixos">
+              <span class="img-diam"><img src="images/icon-ethereum.svg" alt="icon-diamante"></span><p class="p1">0.041EHT</p>
+              <span class="img-relog"><img src="images/icon-clock.svg" alt="icon-relógio"></span><p class="p2">3 days left</p>
+            </div>
+            
+            <div id="perfil">
+              <img src="images/image-avatar.png" alt="Perfil" class="img-perfil">
+              <p>Creation of <span id="marc">Jules Wyvern</span></p>
+            </div>
+          </main>
+    </div>
+</body>
+</html>
